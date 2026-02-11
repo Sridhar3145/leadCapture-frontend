@@ -1,16 +1,68 @@
-# React + Vite
+# Lead Capture Dashboard – Frontend
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+This is the frontend application for the Lead Capture Dashboard project.
+It is built as part of the MERN / Automation Developer screening assignment.
 
-Currently, two official plugins are available:
+---
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) (or [oxc](https://oxc.rs) when used in [rolldown-vite](https://vite.dev/guide/rolldown)) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+## Features
 
-## React Compiler
+- Lead creation form with validation
+- Lead list in table format
+- Lead detail view page
+- Loading states
+- Success and error messages
+- Webhook status feedback after lead creation
+- Responsive UI (mobile and desktop)
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+---
 
-## Expanding the ESLint configuration
+## Tech Stack
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+- React (Vite)
+- Tailwind CSS
+- React Router
+- Fetch API
+
+
+## Setup Instructions
+
+1. Clone the repository
+
+bash
+git clone https://github.com/Sridhar3145/leadCapture-frontend.git
+Go to the project folder
+
+cd leadCapture-frontend
+Install dependencies
+
+npm install
+Start the development server
+
+npm run dev
+The app runs at:
+
+http://localhost:5173
+Backend API
+This frontend consumes APIs from the backend project.
+
+Backend repository:
+
+https://github.com/Sridhar3145/leadCapture-backend
+
+Webhook Behaviour
+After a lead is successfully created, the frontend displays:
+
+Success message when the webhook is triggered successfully
+
+Warning message when the webhook trigger fails
+
+The webhook is triggered by the backend and the webhook status is returned in the API response.
+
+Pages
+Lead Form – Create a new lead
+
+Lead List – View all leads in a table
+
+Lead Detail – View single lead information
+
